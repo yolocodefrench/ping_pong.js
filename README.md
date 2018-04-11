@@ -69,10 +69,10 @@ Ici nous alons tester les if/else en itérant sur un tableau :
 ```json
 "tableau1":[
         1,2,3,"A4","B5"
-],
+]
 ```
 
-Voici le code du template
+Dans le template, les conditions doivent être mises entre accolades. Tous les opérateurs logiques tels que les &, ||, >, etc... peuvent être utilisés dans le test à la seule condition qu'ils doivent être dans les accolades.
 ```html
 ((#tableau1))
     ((if { tableau1 < "2" } ))
@@ -82,6 +82,36 @@ Voici le code du template
     ((else))
         <p>Nombre invalide ((tableau1))</p>
     ((endif)) 
+((/))
+```
+
+## Gestion des switch/case
+
+```json
+"tableau1":[
+        1,2,3,"A4","B5"
+]
+```
+```html
+((#tableau1))
+    ((switch tableau1))
+        ((case 1))
+            <p>Valeur #1#</p>
+        ((endcase))
+        ((case 2))
+            <p>Valeur #2##</p>
+        ((endcase))
+        ((case 3))
+            <p>Valeur #3##</p>
+            ((endcase))
+        ((case A4))
+            <p>Valeur #4(A)##</p>
+        ((endcase))
+        ((case B5))
+            <p>Valeur #5(B)##</p>
+        ((endcase))
+
+    ((endswitch))
 ((/))
 ```
 
