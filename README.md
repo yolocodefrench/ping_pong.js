@@ -3,9 +3,9 @@
 * [Installation](#installation)
 * [Premiers pas](#premiers-pas)
 * [Prise en main de la librairie](#prise-en-main-de-la-librairie)
-    1. [Itération sur un tableau](#itération-sur-un-tableau)
-    2. [Gestion des if/else](#gestion-des-ifelse)
-    3. [Gestion des switch/case](#gestion-des-switchcase)
+    * [Itération sur un tableau](#itération-sur-un-tableau)
+    * [Gestion des if/else](#gestion-des-ifelse)
+    * [Gestion des switch/case](#gestion-des-switchcase)
 
 ## Installation
 
