@@ -1,0 +1,6 @@
+{
+    "routes": [
+        {"HTML_ID": "routehtml1", "Template_File": "templateFile.html", "Data_File": "dataFile.php" },
+        {"HTML_ID": "routehtml2", "Template_File": "templateFile2.html", "Data_File": "dataFile1.php" }
+    ]
+}
