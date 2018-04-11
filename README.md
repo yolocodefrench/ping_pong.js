@@ -31,7 +31,33 @@ Est appelé route, tout élément contenu dans l'attribut route du fichier "rout
 }
 ```
 
-## Itération sur un tableau
+##Prise en main de la librairie
+
+###Afficher des variables
+
+ping_pong.js traite des données json, puis les met dans les templates. 
+
+Les données en json doivent être contenu dans un objet json ayant pour clé "datas".
+```json
+{
+    "datas": {"objet_json_contenant_des_valeurs":"valeur",
+              "autre_objet_json_contenant_des_valeurs":"autre_valeur"}
+}
+```
+
+Pour les afficher, on appelle la clé de la valeur qu'on veut afficher
+
+Dans le fichier de template appelé :
+```html
+<p>((objet_json_contenant_des_valeurs))</p>
+```
+Dans la page affiché à l'utilisateur, le code suivant sera présent :
+```html
+<p>valeur</p>
+```
+
+
+### Itération sur un tableau
 
 Dans le fichier de données, vous devez retrourner un tableau, par exemple :
 ```json
@@ -58,7 +84,7 @@ Dans le fichier de template, l'itération sur un tableau se commence par un ((#v
 Si le tableau ne comporte pas de clé mais que des valeurs, on peut directement appeler la valeur ((tableau))
 
 
-## Gestion des if/else
+### Gestion des if/else
 
 Ping_pong.js inclue une gestion de la logique un peu plus poussée que certaines librairies  de template js. Ici, nous allons détailler
 les if, elseif et else.
@@ -84,7 +110,7 @@ Dans le template, les conditions doivent être mises entre accolades. Tous les o
 ((/))
 ```
 
-## Gestion des switch/case
+### Gestion des switch/case
 
 ping_pong.js comprend aussi une gestion de switch/case.
 Ici, nous allons tester avec un exemple très simple.
