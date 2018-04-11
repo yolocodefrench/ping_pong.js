@@ -21,7 +21,7 @@ Ce fichier sera lu par la librairie pour charger les templates dans vos pages.
 #### Le fichier "routage.json"
 
 Ce fichier contient tous les renseignements sur les différents templates. 
-Est appelé route, tout élément contenu dans l'attribut route du fichier "routage.json". Chaque élément contient l'id html de l'élément dans lequel il son template va être chargé, le chemin relatif vers le template, le fichier qui contient les données qui vont être testées et mises dans le template.
+Est appelé route, tout élément contenu dans l'attribut route du fichier "routage.json". Chaque élément contient l'id html de l'élément dans lequel son template va être chargé, le chemin relatif vers le template, le fichier qui contient les données qui vont être testées et mises dans le template.
 ```json
 {
     "routes": [
