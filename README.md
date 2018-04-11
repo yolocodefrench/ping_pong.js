@@ -2,6 +2,8 @@
 
 * [Installation](#installation)
 * [Premiers pas](#premiers-pas)
+   * [Le fichier de routage](#le-fichier-de-routage)
+   * [Afficher des variables](#afficher-des-variables)
 * [Prise en main de la librairie](#prise-en-main-de-la-librairie)
     * [Itération sur un tableau](#itération-sur-un-tableau)
     * [Gestion des if/else](#gestion-des-ifelse)
@@ -20,7 +22,7 @@ Ce fichier sera lu par la librairie pour charger les templates dans vos pages.
 
 ## Premiers pas
 
-#### Le fichier "routage.json"
+### Le fichier "routage.json"
 
 Ce fichier contient tous les renseignements sur les différents templates. 
 Est appelé route, tout élément contenu dans l'attribut route du fichier "routage.json". Chaque élément contient l'id html de l'élément dans lequel son template va être chargé, le chemin relatif vers le template, le fichier qui contient les données qui vont être testées et mises dans le template.
@@ -32,8 +34,6 @@ Est appelé route, tout élément contenu dans l'attribut route du fichier "rout
     ]
 }
 ```
-
-## Prise en main de la librairie
 
 ### Afficher des variables
 
@@ -58,6 +58,7 @@ Dans la page affiché à l'utilisateur, le code suivant sera présent :
 <p>valeur</p>
 ```
 
+## Prise en main de la librairie
 
 ### Itération sur un tableau
 
