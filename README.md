@@ -1,5 +1,4 @@
 # PingPongJS
-### PingPongJS est une librairie Javascript qui permet de gérer des templates écrits sous le format .pingpong
 
 * [Installation](#installation)
 * [Premiers pas](#premiers-pas)
@@ -11,7 +10,7 @@
 Pour installer la librairie, il faut inclure le fichier javascript ping_pong.js dans votre répertoire correspondant et appeler ce fichier dans le bas de votre page html.
 
 ```html
-<script type="text/javascript" src="script.js" ></script>
+<script type="text/javascript" src="ping_pong.js" ></script>
 ```
 
 Vous devez créer un fichier "routage.json" dans le même répertoire que la librairie ping_pong.js.
