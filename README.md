@@ -3,7 +3,8 @@
 
 * [Installation](#installation)
 * [Premiers pas](#premiers-pas)
-* [Itération sur un tableau](#iteration-sur-un-tableau)
+* [Itération sur un tableau](#itération-sur-un-tableau)
+* [Gestion des if/else](#gestion-des-ifelse)
 
 ## Installation
 
@@ -54,3 +55,5 @@ Dans le fichier de template, l'itération sur un tableau se commence par un ((#v
     ((/))
 </p>
 ```
+
+## Gestion des if/else
