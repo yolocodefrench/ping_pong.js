@@ -17,9 +17,11 @@ Ce fichier sera lu par la librairie pour charger les templates dans vos pages.
 
 #### Le fichier "routage.json"
 
+```json
 {
     "routes": [
         {"HTML_ID": "routehtml1", "Template_File": "templateFile1.html", "Data_File": "dataFile1.php" },
         {"HTML_ID": "routehtml2", "Template_File": "templateFile2.html", "Data_File": "dataFile1.php" }
     ]
 }
+```
