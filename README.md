@@ -33,7 +33,7 @@ Est appelé route, tout élément contenu dans l'attribut route du fichier "rout
 
 ## Iteration sur un tableau
 
-Dans le fichier de données, vous devez retrourner un tableau, par exemple : 7
+Dans le fichier de données, vous devez retrourner un tableau, par exemple :
 ```json
 "tableauObjet":[
     {"id": 1, "valeur": "A"},
@@ -41,4 +41,16 @@ Dans le fichier de données, vous devez retrourner un tableau, par exemple : 7
     {"id": 3, "valeur": "C"},
     {"id": 4, "valeur": "D"}
 ]
+```
+
+Dans le fichier de template, l'itération sur un tableau se commence par un ((#variable)) et se fini par un "((/))", par exemple ici, on se base sur le tableau json juste au dessus : 
+```html
+<p>
+    tableau objet :
+    ((#tableauObjet))
+    <p>
+        ID : ((tableauObjet.id)), Valeur : ((tableauObjet.valeur))
+    </p>
+    ((/))
+</p>
 ```
