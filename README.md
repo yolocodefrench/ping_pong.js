@@ -76,7 +76,7 @@ Voici le code du template
 ```html
 ((#tableau1))
     ((if { tableau1 < "2" } ))
-        <p>Nombre trops faible ((tableau1))</p>
+        <p>Nombre trop faible ((tableau1))</p>
     ((elseif { tableau1 == 3 } ))
         <p>Nombre parfait ((tableau1))</p>
     ((else))
