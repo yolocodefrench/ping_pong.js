@@ -3,6 +3,7 @@
 
 * [Installation](#installation)
 * [Premiers pas](#premiers-pas)
+* [Iteration sur un tableau](#iteration-sur-un-tableau)
 
 ## Installation
 
@@ -28,4 +29,16 @@ Est appelé route, tout élément contenu dans l'attribut route du fichier "rout
         {"HTML_ID": "routehtml2", "Template_File": "templateFile2.html", "Data_File": "dataFile1.php" }
     ]
 }
+```
+
+## Iteration sur un tableau
+
+Dans le fichier de données, vous devez retrourner un tableau, par exemple : 7
+```json
+"tableauObjet":[
+    {"id": 1, "valeur": "A"},
+    {"id": 2, "valeur": "B"},
+    {"id": 3, "valeur": "C"},
+    {"id": 4, "valeur": "D"}
+]
 ```
