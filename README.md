@@ -2,8 +2,10 @@
 
 * [Installation](#installation)
 * [Premiers pas](#premiers-pas)
-* [Itération sur un tableau](#itération-sur-un-tableau)
-* [Gestion des if/else](#gestion-des-ifelse)
+* [Prise en main de la librairie](#prise-en-main-de-la-librairie)
+1. [Itération sur un tableau](#itération-sur-un-tableau)
+2. [Gestion des if/else](#gestion-des-ifelse)
+3. [Gestion des switch/case](#gestion-des-switchcase)
 
 ## Installation
 
@@ -31,9 +33,9 @@ Est appelé route, tout élément contenu dans l'attribut route du fichier "rout
 }
 ```
 
-##Prise en main de la librairie
+## Prise en main de la librairie
 
-###Afficher des variables
+### Afficher des variables
 
 ping_pong.js traite des données json, puis les met dans les templates. 
 
