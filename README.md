@@ -56,4 +56,32 @@ Dans le fichier de template, l'itération sur un tableau se commence par un ((#v
 </p>
 ```
 
+Si le tableau ne comporte pas de clé mais que des valeurs, on peut directement appeler la valeur ((tableau))
+
+
 ## Gestion des if/else
+
+Ping_pong.js inclue une gestion de la logique un peu plus poussée que certaines librairies  de template js. Ici, nous allons détailler
+les if, elseif et else.
+
+Ici nous alons tester les if/else en itérant sur un tableau :
+
+```json
+"tableau1":[
+        1,2,3,"A4","B5"
+],
+```
+
+Voici le code du template
+```html
+((#tableau1))
+    ((if { tableau1 < "2" } ))
+        <p>Nombre trops faible ((tableau1))</p>
+    ((elseif { tableau1 == 3 } ))
+        <p>Nombre parfait ((tableau1))</p>
+    ((else))
+        <p>Nombre invalide ((tableau1))</p>
+    ((endif)) 
+((/))
+```
+
