@@ -87,11 +87,17 @@ Dans le template, les conditions doivent être mises entre accolades. Tous les o
 
 ## Gestion des switch/case
 
+ping_pong.js comprend aussi une gestion de switch/case.
+Ici, nous allons tester avec un exemple très simple.
+Nous allons itérer sur le même tableau que précédemment
+
 ```json
 "tableau1":[
         1,2,3,"A4","B5"
 ]
 ```
+
+En fonction de la valeur contenu dans le tableau, on affichera un paragraphe différent :
 ```html
 ((#tableau1))
     ((switch tableau1))
