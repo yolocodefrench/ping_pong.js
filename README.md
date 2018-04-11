@@ -8,7 +8,9 @@
 
 Pour installer la librairie, il faut inclure le fichier javascript ping_pong.js dans votre répertoire correspondant et appeler ce fichier dans le bas de votre page html.
 
-![chargement du script ping_pong](script.png) 
+```html
+<script type="text/javascript" src="script.js" ></script>
+```
 
 Vous devez créer un fichier "routage.json" dans le même répertoire que la librairie ping_pong.js.
 Ce fichier sera lu par la librairie pour charger les templates dans vos pages.
