@@ -3,7 +3,7 @@
 
 * [Installation](#installation)
 * [Premiers pas](#premiers-pas)
-* [Iteration sur un tableau](#iteration-sur-un-tableau)
+* [Itération sur un tableau](#iteration-sur-un-tableau)
 
 ## Installation
 
@@ -31,7 +31,7 @@ Est appelé route, tout élément contenu dans l'attribut route du fichier "rout
 }
 ```
 
-## Iteration sur un tableau
+## Itération sur un tableau
 
 Dans le fichier de données, vous devez retrourner un tableau, par exemple :
 ```json
