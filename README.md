@@ -149,3 +149,6 @@ En fonction de la valeur contenu dans le tableau, on affichera un paragraphe dif
 ((/))
 ```
 
+## Auteurs :
+* Dany CORBINEAU 
+* Pierre CHÉNÉ
