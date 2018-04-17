@@ -8,7 +8,7 @@
     * [Itération sur un tableau](#itération-sur-un-tableau)
     * [Gestion des if/else](#gestion-des-ifelse)
     * [Gestion des switch/case](#gestion-des-switchcase)
-
+* [Auteurs](#auteurs)
 ## Installation
 
 Pour installer la librairie, il faut inclure le fichier javascript ping_pong.js dans votre répertoire correspondant et appeler ce fichier dans le bas de votre page html.
