@@ -2,12 +2,13 @@
 
 * [Installation](#installation)
 * [Premiers pas](#premiers-pas)
-   * [Le fichier de routage](#le-fichier-de-routage)
+   * [Utiliser le rendu de PingPong](#utiliser-le-rendu-de-pingpong)
    * [Afficher des variables](#afficher-des-variables)
 * [Prise en main de la librairie](#prise-en-main-de-la-librairie)
     * [Itération sur un tableau](#itération-sur-un-tableau)
     * [Gestion des if/else](#gestion-des-ifelse)
     * [Gestion des switch/case](#gestion-des-switchcase)
+    * [Le fichier de routage](#le-fichier-de-routage)
 * [Auteurs](#auteurs)
 ## Installation
 
@@ -22,17 +23,12 @@ Ce fichier sera lu par la librairie pour charger les templates dans vos pages.
 
 ## Premiers pas
 
-### Le fichier "routage.json"
+### Utiliser le rendu de PingPong
 
-Ce fichier contient tous les renseignements sur les différents templates. 
-Est appelé route, tout élément contenu dans l'attribut route du fichier "routage.json". Chaque élément contient l'id html de l'élément dans lequel son template va être chargé, le chemin relatif vers le template, le fichier qui contient les données qui vont être testées et mises dans le template.
-```json
-{
-    "routes": [
-        {"HTML_ID": "routehtml1", "Template_File": "templateFile1.html", "Data_File": "dataFile1.php" },
-        {"HTML_ID": "routehtml2", "Template_File": "templateFile2.html", "Data_File": "dataFile1.php" }
-    ]
-}
+PingPong est un objet javascript qui hérite de la fonction render(). Cette fonction permet de remplir et de d'intégrer un template dans la page web avec le javascript lié à la page web
+
+```javascript
+PingPong.render("template-id-html", "template.html", {"datas":{prenom:"corentin", age: 81, essai :["bleu", "rouge", "vert"]}}
 ```
 
 ### Afficher des variables
@@ -59,6 +55,7 @@ Dans la page affiché à l'utilisateur, le code suivant sera présent :
 ```
 
 ## Prise en main de la librairie
+
 
 ### Itération sur un tableau
 
@@ -147,6 +144,19 @@ En fonction de la valeur contenu dans le tableau, on affichera un paragraphe dif
 
     ((endswitch))
 ((/))
+```
+
+### Le fichier "routage.json"
+
+Ce fichier contient tous les renseignements sur les différents templates. 
+Est appelé route, tout élément contenu dans l'attribut route du fichier "routage.json". Chaque élément contient l'id html de l'élément dans lequel son template va être chargé, le chemin relatif vers le template, le fichier qui contient les données qui vont être testées et mises dans le template.
+```json
+{
+    "routes": [
+        {"HTML_ID": "routehtml1", "Template_File": "templateFile1.html", "Data_File": "dataFile1.php" },
+        {"HTML_ID": "routehtml2", "Template_File": "templateFile2.html", "Data_File": "dataFile1.php" }
+    ]
+}
 ```
 
 ## Auteurs :
