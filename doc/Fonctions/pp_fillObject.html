@@ -28,38 +28,26 @@
 
         <section class="container" style="margin-top: 5vh; margin-bottom: 5vh;">
             <div class="row">
-                <h2>scanHtmlToNextUseOf</h2>
+                <h2>pp_fillObject</h2>
             </div>
             <div class="row">
-                <p>Permet de récupérer l'index de la prochaine utilisation du symbole. Permet de détecter les ((  ou  )).</p>
+                <p>Permet de convertir un objet JSON en objet HTML.</p>
             </div>
             <div class="row">
-                <h3>scanHtmlToNextUseOf(htmlStream, lastIndex, simbol)</h3>
+                <h3>testRequestValue(text, test)</h3>
                 <table class="table" style="margin-bottom: 2em;">
                     <tbody>
                         <tr>
                             <td><span class="badge badge-primary">Arg</span></td>
-                            <td>htmlStream</td>
-                            <td><span class="badge badge-warning">String</span></td>
-                            <td>Le template sur lequel effectuer la recherche.</td>
-                        </tr>
-                        <tr>
-                            <td><span class="badge badge-primary">Arg</span></td>
-                            <td>lastIndex</td>
-                            <td><span class="badge badge-warning">int</span></td></td>
-                            <td>L'index de début de recherche.</td>
-                        </tr>
-                        <tr>
-                            <td><span class="badge badge-primary">Arg</span></td>
-                            <td>simbol</td>
-                            <td><span class="badge badge-warning">String</span></td>
-                            <td>Le texte à rechercher</td>
+                            <td>objJSON</td>
+                            <td><span class="badge badge-warning">JSON Object</span></td>
+                            <td>L'objet à utiliser.</td>
                         </tr>
                         <tr>
                             <td><span class="badge badge-success">Return</span></td>
-                            <td>index</td>
-                            <td><span class="badge badge-warning">int</span></td>
-                            <td>L'index du symbole trouvé.</td>
+                            <td>htmlObject</td>
+                            <td><span class="badge badge-warning">HTML Object</span></td>
+                            <td>L'objet HTML de l'objet JSON.</td>
                         </tr>
                     </tbody>
                 </table>
@@ -69,18 +57,18 @@
                     <h3>Voir aussi :</h3>
                 </div>
                 <div class="col-sm-4">
-                    <a href="getNextRequest.html">
-                            getNextRequest
+                    <a href="pp_loadWithJsonObject.html">
+                        pp_loadWithJsonObject
                     </a>
                 </div>
                 <div class="col-sm-4">
-                    <a href="getVariableByName.html">
-                            getVariableByName
+                    <a href="pp_createFormData.html">
+                        pp_createFormData
                     </a>
                 </div>
                 <div class="col-sm-4">
-                    <a href="execRequest.html">
-                            execRequest
+                    <a href="pp_requestWebPage.html">
+                        pp_requestWebPage
                     </a>
                 </div>
             </div>
