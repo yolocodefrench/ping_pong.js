@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Documentation Ping-Pong</title>
+        <meta name="description" content="Page de documentation d'une fonction">
+        <meta name="author" content="Pierre CHENE, Dany CORBINEAU">
+
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <script src="../js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        <header class="container-fluid" style="background-color: #223; padding : 1vw; color: #fff;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                            <h1 style="text-align:center">Documentation Ping-Pong</h1>
+                    </div>
+                </div>
+                <nav class="nav nav-pills nav-justified">
+                    <a class="nav-link active" href="../index.html">OverView</a>
+                    <a class="nav-link" href="../index.html">Download</a>
+                </nav>
+            </div>
+        </header>
+
+        <section class="container" style="margin-top: 5vh; margin-bottom: 5vh;">
+            <div class="row">
+                <h2>removeRequest</h2>
+            </div>
+            <div class="row">
+                <p>Permet de supprimer une requete dans le template.</p>
+            </div>
+            <div class="row">
+                <h3>removeRequest(request, indexDecalage, htmlStream)</h3>
+                <table class="table" style="margin-bottom: 2em;">
+                    <tbody>
+                        <tr>
+                            <td><span class="badge badge-primary">Arg</span></td>
+                            <td>requestObject</td>
+                            <td><span class="badge badge-warning">{start: Int, end: Int, text: String}</span></td></td>
+                            <td>La requete a supprimer.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-primary">Arg</span></td>
+                            <td>indexDecalage</td>
+                            <td><span class="badge badge-warning">int</span></td></td>
+                            <td>Index qui permet de trouver la requete à partir d'un décalage.</td>
+                        </tr>
+                        <tr>
+                                <td><span class="badge badge-primary">Arg</span></td>
+                                <td>htmlStream</td>
+                                <td><span class="badge badge-warning">String</span></td></td>
+                                <td>Le template sur lequel effecter l'action.</td>
+                            </tr>
+                        <tr>
+                            <td><span class="badge badge-success">Return</span></td>
+                            <td>htmlStream</td>
+                            <td><span class="badge badge-warning">String</span></td></td>
+                            <td>Le template modifié.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>Voir aussi :</h3>
+                </div>
+                <div class="col-sm-4">
+                    <a href="testValue.html">
+                            testValue
+                    </a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="getNextEndRequest.html">
+                            getNextEndRequest
+                    </a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="execRequest.html">
+                            execRequest
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <footer class="container-fluid" style="background-color: #222; color: #fff; font-size:0.8rem;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />Ce(tte) œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International</a>
+                    </div>
+                    <div class="col-12">
+                        <p>Create by Pierre CHENE and Dany CORBINEAU 2017-2018</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
