@@ -17,10 +17,12 @@ window.addEventListener("load", ()=>{
             // 2
             var routeFiles=getRouteById(routesId,routesStream);
             if(routeFiles!==null){
-                // 3
                 pp_requestWebPage(routeFiles[0],null,(dataHtml)=>{
                     pp_requestJSON(routeFiles[1],null,(dataJson)=>{
                         // 4
+                        console.log(dataHtml);
+                        console.log(dataJson);
+
                         var template=fillTemplateWithDatas(dataHtml, dataJson);
                         // 5
                         fillDocumentWithTemplate(routesId,template);
@@ -35,6 +37,22 @@ window.addEventListener("load", ()=>{
     });
 });
 
+function PingPong(){}
+/**
+ * 
+ * @param {String} idHtml La valeur de l'attribut [template-id]
+ * @param {String} templateUrl Le chemin relatif pour récupérer le template
+ * @param {*} dataJson Les données en Json 
+ */
+PingPong.prototype.render = function(idHtml, templateUrl, dataJson){
+    console.log(dataJson);
+
+    pp_requestWebPage(templateUrl, null, function(responseHtml){
+        var template = fillTemplateWithDatas(responseHtml, dataJson)
+        fillDocumentWithTemplate(idHtml,template);
+    });
+        
+}
 
 /**
  * Remplit la page web avec les templates
@@ -606,12 +624,6 @@ function pp_requestWebPage(url,data,callback)
         }
     );
 }
-
-function pp_getTemplate(filename){
-    url="../templates/"+filename;
-}
-
-
 /** 
     pp_createFormData: A utiliser pour envoyer des données lors du post
         - Permet de créer un objet FormData à partir d'un objet simple
@@ -627,7 +639,6 @@ function pp_createFormData(object)
     }, this);
     return data;
 }
-
 
 /**************************************************************************************************************
  * 
@@ -694,6 +705,8 @@ function pp_fillObject(objJSON)
     }
     return obj;
 }
+
+PingPong = new PingPong();
 
 
 
