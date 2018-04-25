@@ -25,10 +25,10 @@ Ce fichier sera lu par la librairie pour charger les templates dans vos pages.
 
 ### Utiliser le rendu de PingPong
 
-PingPong est un objet javascript qui hérite de la fonction render(). Cette fonction permet de remplir et de d'intégrer un template dans la page web avec le javascript lié à la page web
-
+PingPong est un objet javascript qui hérite de la fonction render(). Cette fonction permet de remplir et de d'intégrer un template dans la page web avec le javascript lié à la page web.
+Example : 
 ```javascript
-PingPong.render("template-id-html", "template.html", {"datas":{prenom:"corentin", age: 81, essai :["bleu", "rouge", "vert"]}}
+PingPong.render("template-id-html", "template.html", {"datas":{prenom:"corentin", age: 81});
 ```
 
 ### Afficher des variables
