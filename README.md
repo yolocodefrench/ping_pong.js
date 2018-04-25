@@ -148,6 +148,7 @@ En fonction de la valeur contenu dans le tableau, on affichera un paragraphe dif
 
 ### Le fichier "routage.json"
 
+PingPong.js permet d'inclure des templates et de les remplir en appelant un genre de routeur qui va faire la liaison entre les données, le template et l'élément html dans lequel le template rempli devra être affiché.
 Ce fichier contient tous les renseignements sur les différents templates. 
 Est appelé route, tout élément contenu dans l'attribut route du fichier "routage.json". Chaque élément contient l'id html de l'élément dans lequel son template va être chargé, le chemin relatif vers le template, le fichier qui contient les données qui vont être testées et mises dans le template.
 ```json
