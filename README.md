@@ -3,6 +3,7 @@
 * [Installation](#installation)
 * [Premiers pas](#premiers-pas)
    * [Utiliser le rendu de PingPong](#utiliser-le-rendu-de-pingpong)
+   * [Utilisation static](#utilisation-statique)
    * [Afficher des variables](#afficher-des-variables)
 * [Prise en main de la librairie](#prise-en-main-de-la-librairie)
     * [Itération sur un tableau](#itération-sur-un-tableau)
@@ -12,24 +13,43 @@
 * [Auteurs](#auteurs)
 ## Installation
 
-Pour installer la librairie, il faut inclure le fichier javascript ping_pong.js dans votre répertoire correspondant et appeler ce fichier dans le bas de votre page html.
+Pour utiliser la librairie vous n'avez besoin que du fichier ping_pong.js. Ce fichier est à ajouter à votre projet.
+Il vous faudra ensuite appeler ce fichier dans votre html 
 
 ```html
 <script type="text/javascript" src="ping_pong.js" ></script>
 ```
 
-Vous devez créer un fichier "routage.json" dans le même répertoire que la librairie ping_pong.js.
-Ce fichier sera lu par la librairie pour charger les templates dans vos pages.
-
 ## Premiers pas
+Vous avez ensuite 2 façons d'utiliser la librairie.
 
 ### Utiliser le rendu de PingPong
-
 PingPong est un objet javascript qui hérite de la fonction render(). Cette fonction permet de remplir et de d'intégrer un template dans la page web avec le javascript lié à la page web.
 Example : 
 ```javascript
 PingPong.render("template-id-html", "template.html", {"datas":{prenom:"corentin", age: 81}});
 ```
+Par exemple lors d'un clique sur un bouton, la librairie va charger le template à l'url "template.html", utiliser les données  {"datas":{prenom:"corentin", age: 81}} pour le remplir, et l'injecter dans la balise d'attribut template-id="template-id-html".
+
+Pou utiliser PingPong.render, il vous faudra au préalable suivre la procédure d'installation, puis ajouter une balise avec l'attribut  template-id dans votre HTML.
+
+### Utilisation statique
+Pour utiliser le template de façon statique il vous faudra suivre la procédure d'installation.
+Puis, vous devez créer un fichier "routage.json" dans le même répertoire que la librairie ping_pong.js.
+Ce fichier sera lu par la librairie pour charger les templates dans vos pages.
+```json
+{
+    "routes": [
+        {"HTML_ID": "routehtml1", "Template_File": "templateFile.html", "Data_File": "dataFile.php" },
+    ]
+}
+```
+Enfin, il vous faut ajouter l'attribut template-id à l'une de vos balises en html.
+```html
+<div template-id="routehtml1"></div>
+```
+Lors du chargement de la page, la librairie va lire le fichier routage.json.
+Elle va ensuite charger les données de l'url "Data_File" dans le template de l'url "Template_File" puis les incorporer dans la balise "HTML_ID".
 
 ### Afficher des variables
 
