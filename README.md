@@ -31,7 +31,7 @@ PingPong.render("template-id-html", "template.html", {"datas":{prenom:"corentin"
 ```
 Par exemple lors d'un clique sur un bouton, la librairie va charger le template à l'url "template.html", utiliser les données  {"datas":{prenom:"corentin", age: 81}} pour le remplir, et l'injecter dans la balise d'attribut template-id="template-id-html".
 
-Pou utiliser PingPong.render, il vous faudra au préalable suivre la procédure d'installation, puis ajouter une balise avec l'attribut  template-id dans votre HTML.
+Pour utiliser PingPong.render, il vous faudra au préalable suivre la procédure d'installation, puis ajouter une balise avec l'attribut  template-id dans votre HTML.
 
 ### Utilisation statique
 Pour utiliser le template de façon statique il vous faudra suivre la procédure d'installation.

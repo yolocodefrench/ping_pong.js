@@ -52,7 +52,17 @@ PingPong.prototype.render = function(idHtml, templateUrl, dataJson, dataPost ={}
         var template = fillTemplateWithDatas(responseHtml, dataJson)
         fillDocumentWithTemplate(idHtml,template);
     });
-        
+}
+
+/**
+ * Récuppération de données JSON depuis un URL.
+ * 
+ * @param {String} url L'url à appeler
+ * @param {Object} dataPost Les données envoyées en post
+ * @param {callback} callback La fonction appelé une fois les données récuppérées function (datas){}
+ */
+PingPong.prototype.getJSonDataFromUrl = function(url, dataPost={}, callback){
+    pp_requestJSON(url, pp_createFormData(dataPost), callback);
 }
 
 
