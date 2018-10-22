@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Documentation Ping-Pong</title>
+        <meta name="description" content="Page de téléchargement et d'installation de Ping_Ping">
+        <meta name="author" content="Pierre CHENE, Dany CORBINEAU">
+
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <script src="../js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        <header class="container-fluid" style="background-color: #223; padding : 1vw; color: #fff;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                            <h1 style="text-align:center">Téléchargement et Installation</h1>
+                    </div>
+                </div>
+                <nav class="nav nav-pills nav-justified">
+                    <a class="nav-link " href="../index.html">OverView</a>
+                    <a class="nav-link active" href="#">Download et Installation</a>
+                    <a class="nav-link" href="#">Démonstration</a>
+                </nav>
+            </div>
+        </header>
+
+        <section class="container" style="margin-top: 5vh;">
+            <h2>Téléchargement</h2>
+            <p>Vous avez 2 méthode pour télécharger la librairie.</p>
+            <ul class="list-group">
+                <li class="list-group-item">Télécharger le fichier ping_pong.js du <a href="https://github.com/yolocodefrench/ping_pong.js">Repository</a></li>
+                <li class="list-group-item">
+                    Télécharger ou clonner le <a href="https://github.com/yolocodefrench/ping_pong.js">Repository</a>
+                    <code>git clone https://github.com/yolocodefrench/ping_pong.js.git</code>
+                </li>
+            </ul>
+        </section>
+        <section class="container" style="margin-top: 5vh;">
+            <h2>Installation</h2>
+            <p>Pour installer la librairie il vous faudra ajouter le fichier ping_pong.js dans un dossier de votre projet, plus l'ajouter à votre HTML.</p>
+            <ul class="list-group"><li class="list-group-item"><code>&lt;script type="text/javascript" src="ping_pong.js" &gt;&lt;/script&gt;</code></li></ul>
+            <p>
+                Enfin, si vous souhaitez utiliser la fonctionnalité statique, il vous fautra créer le fichier routage.json à la racine de votre document html.
+            </p>
+            <ul class="list-group"><li class="list-group-item">
+            <code>
+                {<br/>
+                    "routes": [<br/>
+                        {"HTML_ID": "routehtml1", "Template_File": "templateFile.html", "Data_File": "dataFile.php" },<br/>
+                        {"HTML_ID": "routehtml2", "Template_File": "templateFile2.html", "Data_File": "dataFile1.php" }<br/>
+                    ]<br/>
+                }
+            </code>
+            </ul></li>
+            <div class="row" style="margin: 30px 0px">
+                <button type="button" class="btn btn-primary" href="../index.html">Démonstration</button>
+            </div>
+        </section>
+        
+
+        <!-- footer -->
+        <footer class="container-fluid" style="background-color: #222; color: #fff; font-size:0.8rem;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />Ce(tte) œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International</a>
+                    </div>
+                    <div class="col-12">
+                        <p>Create by Pierre CHENE and Dany CORBINEAU 2017-2018</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

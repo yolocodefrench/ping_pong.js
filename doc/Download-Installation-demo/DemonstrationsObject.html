@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Documentation Ping-Pong</title>
+        <meta name="description" content="Page de d'acceil de la doc Ping_Ping">
+        <meta name="author" content="Pierre CHENE, Dany CORBINEAU">
+
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <script src="../js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        <header class="container-fluid" style="background-color: #223; padding : 1vw; color: #fff;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                            <h1 style="text-align:center">Téléchargement et Installation</h1>
+                    </div>
+                </div>
+                <nav class="nav nav-pills nav-justified">
+                    <a class="nav-link " href="../index.html">OverView</a>
+                    <a class="nav-link active" href="./Download.html">Download et Installation</a>
+                    <a class="nav-link" href="#">Démonstration</a>
+                </nav>
+            </div>
+        </header>
+
+        <section class="container" style="margin-top: 5vh;">
+           <h2>Généralitées</h2>
+           <p>
+               Pour toutes les démonstrations nous avons un fichier <strong>index.html</strong> qui contient le site de façons générale,
+               <strong>Ping_Pong.js</strong> qui est la librairie, 
+               <strong>data.json</strong> qui est le fichier de données, 
+               <strong>template.json</strong> qui est le template.
+           </p>
+        </section>
+        <section class="container" style="margin-top: 5vh;">
+            <h2>Exemple 1 : Chargement d'un template</h2>
+            <p class="btn btn-primary">index.html</p>
+            <div class="card card-body">
+                <code>
+                    &lt;!DOCTYPE html&gt;
+                    <br/>
+                    &lt;html&gt;
+                    <br/>
+                        &lt;head&gt;
+                    <br/>
+                            &lt;meta charset="UTF-8"&gt;
+                    <br/>
+                            &lt;title&gt;Title of the document&lt;/title&gt;
+                    <br/>
+                        &lt;/head&gt;
+                    <br/>
+                    
+                    <br/>
+                        &lt;body&gt;
+                    <br/>
+                            &lt;button onclick="calltemplate()"&gt;Load&lt;/button&gt;
+                    <br/>
+                            &lt;div template-id="routehtml1"&gt;&lt;/div&gt;
+                    <br/>
+                    
+                    <br/>
+                        &lt;/body&gt;
+                    <br/>
+                        &lt;script src="Ping_Pong.js"&gt;&lt;/script&gt;
+                    <br/>
+                        &lt;script&gt;
+                    <br/>
+                            function calltemplate(){
+                    <br/>
+                                PingPong.render('routehtml1', 'template.html', {})
+                    <br/>
+                            }
+                    <br/>
+                        &lt;/script&gt;
+                    <br/>
+                    &lt;/html&gt;
+                </code>
+            </div>
+            <p class="btn btn-primary">template.html</p>
+            <div class="card card-body">
+                <code>
+                    &lt;div&gt;
+                    <br/>
+                        &lt;h1&gt;Template&lt;/h1&gt;
+                    <br/>
+                        &lt;p&gt;
+                    <br/>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, voluptatum neque? Veniam perspiciatis rem delectus, quidem sapiente cupiditate commodi ullam dignissimos recusandae possimus tempore eius quos accusantium, cumque similique repudiandae?
+                    <br/>
+                        &lt;/p&gt;
+                    <br/>
+                    &lt;/div&gt;
+                    <br/>
+                </code>
+            </div>
+        </section>
+        <!-- footer -->
+        <footer class="container-fluid" style="background-color: #222; color: #fff; font-size:0.8rem;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />Ce(tte) œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International</a>
+                    </div>
+                    <div class="col-12">
+                        <p>Create by Pierre CHENE and Dany CORBINEAU 2017-2018</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

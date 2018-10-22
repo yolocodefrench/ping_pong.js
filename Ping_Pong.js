@@ -42,17 +42,29 @@ function PingPong(){}
  * 
  * @param {String} idHtml La valeur de l'attribut [template-id]
  * @param {String} templateUrl Le chemin relatif pour récupérer le template
- * @param {*} dataJson Les données en Json 
+ * @param {*} dataJson Les données en Json utilisées pour remplire le template 
+ * @param {Object} dataPost Les données envoyées en POST vers l'URL (tmplateUrl) 
  */
-PingPong.prototype.render = function(idHtml, templateUrl, dataJson){
+PingPong.prototype.render = function(idHtml, templateUrl, dataJson, dataPost ={}){
     console.log(dataJson);
 
-    pp_requestWebPage(templateUrl, null, function(responseHtml){
+    pp_requestWebPage(templateUrl,  pp_createFormData(dataPost), function(responseHtml){
         var template = fillTemplateWithDatas(responseHtml, dataJson)
         fillDocumentWithTemplate(idHtml,template);
     });
-        
 }
+
+/**
+ * Récuppération de données JSON depuis un URL.
+ * 
+ * @param {String} url L'url à appeler
+ * @param {Object} dataPost Les données envoyées en post
+ * @param {callback} callback La fonction appelé une fois les données récuppérées function (datas){}
+ */
+PingPong.prototype.getJSonDataFromUrl = function(url, dataPost={}, callback){
+    pp_requestJSON(url, pp_createFormData(dataPost), callback);
+}
+
 
 /**
  * Remplit la page web avec les templates
@@ -624,20 +636,24 @@ function pp_requestWebPage(url,data,callback)
         }
     );
 }
-/** 
-    pp_createFormData: A utiliser pour envoyer des données lors du post
+
+/**
+ * pp_createFormData: A utiliser pour envoyer des données lors du post
         - Permet de créer un objet FormData à partir d'un objet simple
-        return: un objet FormData
-        object: l'objet utilisé pour créer l'objet FormData 
-*/
+ * @param {Object} object un object de données
+ * @returns {FormData | null} l'objet à envoyer lors de l'appel
+ */
 function pp_createFormData(object)
 {
-    var data=new FormData()
-    var keys=Object.keys(object);
-    keys.forEach(function(valeur) {
-        data.append(valeur,object[valeur]);
-    }, this);
-    return data;
+    if( object != {} ) {
+        var data=new FormData()
+        var keys=Object.keys(object);
+        keys.forEach(function(valeur) {
+            data.append(valeur,object[valeur]);
+        }, this);
+        return data;
+    }
+    return null;
 }
 
 /**************************************************************************************************************
